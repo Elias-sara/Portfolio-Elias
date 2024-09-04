@@ -1,0 +1,78 @@
+/* Footer.module.css */
+.footer {
+  padding: 2rem;
+  background-color: var(
+    --your-background-color
+  ); /* Add a background color if needed */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+}
+
+.socialIcons {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem; /* Space between social icons */
+  position: relative; /* Positioning context for tooltips */
+}
+
+.iconLink {
+  color: var(--your-icon-color); /* Adjust icon color */
+  font-size: 1.5rem; /* Adjust icon size */
+  transition: color 0.3s ease; /* Add transition effect */
+  position: relative; /* Ensure tooltip positions correctly */
+}
+
+.iconLink:hover {
+  color: var(--your-icon-hover-color); /* Color on hover */
+}
+
+.tooltip {
+  visibility: hidden;
+  width: auto;
+  min-width: 150px; /* Minimum width for the tooltip */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the icon */
+  left: 50%;
+  margin-left: -75px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap; /* Prevent tooltip text from wrapping */
+}
+
+.iconLink:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.backToTop {
+  margin: 1rem 0;
+  font-size: 1.25rem; /* Adjust font size for the back-to-top link */
+  color: var(--your-link-color); /* Adjust link color */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem; /* Space between logo and text */
+}
+
+.logo {
+  max-width: 30px; /* Set a max-width for the logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.footerText {
+  margin: 0;
+  font-size: 1rem; /* Adjust font size as needed */
+  color: var(--your-text-color); /* Adjust text color */
+}
